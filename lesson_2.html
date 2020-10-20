@@ -98,7 +98,7 @@
             break
             
             default:
-            alert ("Введите корректное значение")
+            console.log("Введите корректное значение");
         }
     </script>
     <script>
@@ -120,20 +120,25 @@
         proiz(3,5);
 
         function mathOperation(arg1, arg2, operation){
-            if(operation===sum){
-                return console.log(arg1 + arg2)
-            }
-            else if(operation===raz){
-                return console.log(arg1 - arg2)
-            }
-            else if(operation===del){
-                return console.log(arg1 / arg2)
-            }
-            else if(operation===proiz){
-                return console.log(arg1 * arg2)
-            }
-            else {
-               return
+            switch (operation){
+            case sum:
+                console.log(arg1 + arg2)
+                break
+            
+            case raz:
+                console.log(arg1 - arg2)
+                break
+            
+            case del:
+                console.log(arg1 / arg2)
+                break
+            
+            case proiz:
+                console.log(arg1 * arg2)
+                break
+            
+            default:
+                console.log("Введите корректное значение");
             }
         }
         mathOperation(6,5,sum)
