@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+    var a = 1, b = 1, c, d;
+    c = ++a; alert(c);           // 2 Префиксная форма инкремента - значение увеличивается и толко затем присваивается
+    d = b++; alert(d);           // 1 Постфиксная форима инкремента значение присваивается и только затем увеличивается
+    c = (2+ ++a); alert(c);      // 5 Сначало инкремент потом вычисление так как а было равно 2 после первого инкремента 
+                                 //   прибавляем еще единичку и затем делаем вычисление +2 получаем 5 на выходе
+    d = (2+ b++); alert(d);      // 4 Постфикс сначала вычисление потом инкремент 2+2 (после первого инкремента) затем приваиваем 
+                                 //   значение выражения к d потом вычисляем инкремент
+    alert(a);                    // 3 Изначально равное 1 + 1 в первом случае и еще + 1 во втором случае
+    alert(b);                    // 3 Такая же история как и в предыдущем варианете только могло сметить то что при постфиксной форме 
+                                 //   инкремнта сначала мы присваиваем значение а только потом увеличиваем, но число то все равно увеличивается поэтому 3
+    </script>
+    <script>
+        var a = 2;
+        var x = 1 + (a *= 2); // 2*2=4 + 1 = 5
+        alert("Х будет равен:  " + x);
+    </script>
+    <script>
+        var a = -2; b = 4;
+        if(a>0 && b>0){
+            alert("Разность чисел а и b:  " + (c = a - b));
+        }
+        else if(a<0 && b<0){
+            alert("Произведение чисел a и b:  " + (c = a * b));
+        }
+        else {
+            alert("Сумма чисел a и b:  " + (c = a + b));
+        }
+    </script>
+    <script>
+        var a = 5;
+        switch (a) {
+            case 0: 
+            console.log(a);
+            a = ++a;
+
+            case 1: 
+            console.log(a);
+            a = ++a;
+            
+            case 2: 
+            console.log(a);
+            a = ++a;
+        
+            case 3: 
+            console.log(a);
+            a = ++a;
+           
+            case 4: 
+            console.log(a);
+            a = ++a;
+            
+            case 5: 
+            console.log(a);
+            a = ++a;
+            
+            case 6: 
+            console.log(a);
+            a = ++a;
+            
+            case 7: 
+            console.log(a);
+            a = ++a;
+            
+            case 8: 
+            console.log(a);
+            a = ++a;
+            
+            case 9: 
+            console.log(a);
+            a = ++a;
+            
+            case 10: 
+            console.log(a);
+            a = ++a;
+            
+            case 11: 
+            console.log(a);
+            a = ++a;
+            
+            case 12: 
+            console.log(a);
+            a = ++a;
+            
+            case 13: 
+            console.log(a);
+            a = ++a;
+            
+            case 14: 
+            console.log(a = ++a);
+            break
+            
+            default:
+            alert ("Введите корректное значение")
+        }
+    </script>
+    <script>
+        function sum(a,b){
+            return alert(a + b);
+        }
+        sum(3,5);
+        function raz(a,b){
+            return alert(a - b);
+        }
+        raz(3,5);
+        function del(a,b){
+            return alert(a / b);
+        }
+        del(3,5);
+        function proiz(a,b){
+            return alert(a * b);
+        }
+        proiz(3,5);
+
+        function mathOperation(arg1, arg2, operation){
+            if(operation===sum){
+                return console.log(arg1 + arg2)
+            }
+            else if(operation===raz){
+                return console.log(arg1 - arg2)
+            }
+            else if(operation===del){
+                return console.log(arg1 / arg2)
+            }
+            else if(operation===proiz){
+                return console.log(arg1 * arg2)
+            }
+            else {
+               return
+            }
+        }
+        mathOperation(6,5,sum)
+        mathOperation(6,5,raz)
+        mathOperation(6,5,del)
+        mathOperation(6,5,proiz)
+    </script>
+<body>
+    
+</body>
+</html>
