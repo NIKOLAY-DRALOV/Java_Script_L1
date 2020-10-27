@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var mas = [];
+    var end = 1;
+    while (end < 100){
+        end++;
+        mas.push(end)
+    }
+    var a = 2;
+    var b = 2;
+    while(a <= 100){
+        a += b;
+        mas.slice(mas.indexOf(a), 1);
+    }
+    a = 4;
+    b = 3;
+    while (a < 100){
+        if (a % b ===0 && mas.indexOf(a) !== -1){
+            mas.splice(mas.indexOf(a), 1);
+        }else{
+            a++;
+            }
+    }
+    a = 6;
+    b = 5;
+    while (a < 100) {
+        if (a % b === 0 && mas.indexOf(a) !== -1) {
+            mas.splice(mas.indexOf(a), 1);
+        } else {
+            a++;
+        }
+    }
+    a = 8;
+    b = 7;
+    while (a < 100) {
+        if (a % b === 0 && mas.indexOf(a) !== -1) {
+            mas.splice(mas.indexOf(a), 1);
+        } else {
+            a++;
+        }
+    }
+    console.log(mas);
+</script>
+<script>
+    var goods = [
+    {
+        title: "Товар 1",
+        price: 100,
+        quantity: 1
+    },
+    {
+        title: "Товар 2",
+        price: 200,
+        quantity: 1
+    },
+    {
+        title: "Товар 3",
+        price: 300 ,
+        quantity: 1
+    },
+    {
+        title: "Товар 4",
+        price: 400 ,
+        quantity: 1
+    }
+]   
+
+for(good of goods){
+    console.log(good.title + " стоит "+good.price+"\n");
+}
+function countBasketPrice(mas){
+    var q = 0;
+    for(item of mas){
+        q = q + item.quantity;
+    }
+    return q;
+}
+
+function getSum(mas){
+    var s = 0;
+    for(item of mas){
+        s = s + item.price;
+    }
+    return s;
+}
+    
+console.log(getSum(goods)); 
+console.log(countBasketPrice(goods))
+</script>
+<script>
+    for (var i = -1; i < 9; i++, console.log(i)) {}
+</script>
+<body>
+    
+</body>
+</html>
