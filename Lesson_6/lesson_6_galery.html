@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson_6</title>
+    <link rel="stylesheet" href="lesson_6_style.css">
+</head>
+<body>
+   
+    <img class="picture" id="a1" src="../Lesson_6/small/dog.jpg" alt="dog">
+    <img class="picture" id="a2" src="../Lesson_6/small/cat.jpg" alt="cat">
+    <img class="picture" id="a3" src="../Lesson_6/small/duck.jpg" alt="duck">
+    <div><img class="galery" id="b4" src="" alt="big"></div>
+    
+
+    <script>
+        function f(event){
+            switch (event.target){
+                case a1:
+                    document.getElementById("b4").src = "../Lesson_6/big/dog.jpg";
+                    document.querySelectorAll("galery").style.height = "600";
+                    document.querySelectorAll("galery").style.width = "1260";
+                    break
+                case a2:
+                    document.getElementById("b4").src = "../Lesson_6/big/cat.jpg";
+                    document.querySelectorAll("galery").style.height = "600";
+                    document.querySelectorAll("galery").style.width = "1260";
+                    break
+                case a3:
+                alert("Ошибка")
+            }
+        }
+        var a1 = document.querySelector("#a1");
+        var a2 = document.querySelector("#a2");
+        var a3 = document.querySelector("#a3");
+
+        a1.onclick = f;
+        a2.onclick = f;
+        a3.onclick = f;
+        // непонятно почему стилю height присваивается значение undefined
+        // Cannot set property 'height' of undefined at HTMLImageElement.f
+    
+    </script>
+</body>
+</html>
